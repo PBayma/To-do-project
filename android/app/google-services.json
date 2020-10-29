@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "100589574921",
+    "firebase_url": "https://save-a-day-prototype.firebaseio.com",
+    "project_id": "save-a-day-prototype",
+    "storage_bucket": "save-a-day-prototype.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100589574921:android:19038c3f0ad3decb5e11d8",
+        "android_client_info": {
+          "package_name": "com.example.project_bloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "100589574921-8bp5j6aas4njp85i0f9eltf7bg1nomlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3zV1YtFS72wBkRcJr8Pfn2heJ6QfYUms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100589574921-8bp5j6aas4njp85i0f9eltf7bg1nomlc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
