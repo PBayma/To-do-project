@@ -9,11 +9,13 @@ class TodoServices {
     return itemCollection.snapshots();
   }
 
-  create(Todo todo) async {
+  create(ToDo todo) async {
     await itemCollection.add(todo.toJson());
   }
 
-  delete() async {}
+  delete(String item) async {
+    return itemCollection.doc(item).delete();
+  }
 
   // read() async {
   // List ongList = List();

@@ -1,10 +1,13 @@
-class Todo {
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+class ToDo {
   String name;
   String description;
+  DocumentReference reference;
 
-  Todo(this.name, this.description);
+  ToDo(this.name, this.description);
 
-  Todo.fromJson(Map<String, dynamic> json) {
+  ToDo.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     description = json['description'];
   }
@@ -15,4 +18,10 @@ class Todo {
     data['description'] = this.description;
     return data;
   }
+
+  //   @@@ Maybe use toMap() in another project @@@
+  //   Map<String, dynamic> toMap() => {
+  //   "done": done,
+  //   "name": name
+  // };
 }

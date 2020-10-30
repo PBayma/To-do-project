@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:project_bloc/routes_utils.dart';
 import 'package:project_bloc/screens/HomePage/bloc/homepage_bloc.dart';
 
 final String _title = 'Bloc Exemple';
@@ -10,7 +11,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  HomePageBloc bloc = HomePageBloc();
+  HomePageBloc _bloc = HomePageBloc();
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(_title),
       ),
       body: StreamBuilder(
-          stream: bloc.output,
+          stream: _bloc.output,
           builder: (
             BuildContext context,
             AsyncSnapshot<QuerySnapshot> snapshot,
@@ -40,7 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 itemBuilder: (BuildContext context, int i) {
                   var doc = snapshot.data.docs[i];
                   var item = doc.data();
-                  print(doc.data());
+                  var itemRef = doc.reference.id;
+
                   return Container(
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -57,14 +59,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       subtitle: Text(item['description']),
                       trailing: IconButton(
                         icon: Icon(Icons.delete),
-                        onPressed: () => null,
+                        onPressed: () => _bloc.deleteItem(itemRef),
                       ),
+                      onTap: () => Navigator.pushNamed(context, toDoRoute,
+                          arguments: itemRef),
                     ),
                   );
                 });
           }),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => Navigator.pushNamed(context, '/createOng'),
+        onPressed: () => Navigator.pushNamed(context, createRoute),
         tooltip: 'Add new',
         child: Icon(Icons.add),
       ),

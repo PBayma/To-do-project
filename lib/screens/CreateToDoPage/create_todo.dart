@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_bloc/models/todo.dart';
-import 'package:project_bloc/screens/CreateOngPage/components/text_input.dart';
-import 'package:project_bloc/services/todo_services.dart';
+import 'package:project_bloc/screens/CreateToDoPage/bloc/create_todo_bloc.dart';
+import 'package:project_bloc/screens/CreateToDoPage/components/text_input.dart';
 
 final String _title = 'Crie sua Ong';
 
@@ -14,7 +13,7 @@ const String _exempleDescription = 'Ex: Ong voltada para causas animais...';
 class CreateTodo extends StatelessWidget {
   final TextEditingController _controllerName = TextEditingController();
   final TextEditingController _controllerDescription = TextEditingController();
-  final TodoServices todoServices = TodoServices();
+  final CreateTodoBloc _bloc = CreateTodoBloc();
 
   @override
   Widget build(BuildContext context) {
@@ -54,8 +53,7 @@ class CreateTodo extends StatelessWidget {
     final String _name = _controllerName.text;
     final String _description = _controllerDescription.text;
     if (_name != null && _description != null) {
-      final createdOng = Todo(_name, _description);
-      todoServices.create(createdOng);
+      _bloc.createTodo(_name, _description);
       Navigator.pop(context);
     }
   }
