@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project_bloc/screens/CreateContactPage/bloc/create_contact_bloc.dart';
-import 'package:project_bloc/screens/CreateContactPage/components/number_input.dart';
 import 'package:project_bloc/screens/CreateContactPage/components/text_input.dart';
 
 final String _title = 'Adicionar Contatos';

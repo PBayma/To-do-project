@@ -1,15 +1,27 @@
 # project_bloc
 
-A new Flutter project.
+## General Info
+
+This project is a starting point for a Flutter application. The objective is learn Flutter and try to apply BLoC pattern in a simple application. Beside this, I tried to implement route manager to learn if I need to upgrade this application.
+
+## Tecnologies
+
+Flutter 1.22.2
+Dart 2.10.2
+Firebase (cloud_firestore: ^0.14.1+3)
+
+## Illustrations
+
+The application has just two screens. Homepage has the list of contacts that you added on firebase:
+
+![](images/contact_list.png)
+
+And if you click to add another contact, will open this Create Contact screen:
+
+![](images/add_contact_name.png)
+![](images/add_contact_number.png)
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
