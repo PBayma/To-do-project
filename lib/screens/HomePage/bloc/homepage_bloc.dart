@@ -1,10 +1,9 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:project_bloc/models/todo.dart';
-import 'package:project_bloc/services/todo_services.dart';
+import 'package:project_bloc/services/contact_services.dart';
 
 class HomePageBloc {
-  TodoServices todoServices = TodoServices();
+  ContactServices todoServices = ContactServices();
 
   final StreamController _streamController = StreamController();
 

@@ -1,13 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class ToDo {
+class Contact {
   String name;
   String description;
   DocumentReference reference;
 
-  ToDo(this.name, this.description);
+  Contact(this.name, this.description);
 
-  ToDo.fromJson(Map<String, dynamic> json) {
+  Contact.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     description = json['description'];
   }

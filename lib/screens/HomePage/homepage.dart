@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:project_bloc/routes_utils.dart';
 import 'package:project_bloc/screens/HomePage/bloc/homepage_bloc.dart';
 
-final String _title = 'Bloc Exemple';
+final String _title = 'Contatos';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -61,8 +61,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         icon: Icon(Icons.delete),
                         onPressed: () => _bloc.deleteItem(itemRef),
                       ),
-                      onTap: () => Navigator.pushNamed(context, toDoRoute,
-                          arguments: itemRef),
                     ),
                   );
                 });

@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:project_bloc/screens/CreateToDoPage/bloc/create_todo_bloc.dart';
-import 'package:project_bloc/screens/CreateToDoPage/components/text_input.dart';
+import 'package:project_bloc/screens/CreateContactPage/bloc/create_contact_bloc.dart';
+import 'package:project_bloc/screens/CreateContactPage/components/number_input.dart';
+import 'package:project_bloc/screens/CreateContactPage/components/text_input.dart';
 
-final String _title = 'Crie sua Ong';
+final String _title = 'Adicionar Contatos';
 
-const String _ongName = 'Nome da Ong';
-const String _exempleName = 'Ex: Ubuntu';
+const String _ongName = 'Nome';
+const String _exempleName = 'Ex: Marcelo';
 
-const String _ongDescription = 'Descreva suas atividades';
-const String _exempleDescription = 'Ex: Ong voltada para causas animais...';
+const String _ongDescription = 'Número';
+const String _exempleDescription = 'Ex: 619991998877';
+
+const String _buttonName = 'Cadastrar';
 
 class CreateTodo extends StatelessWidget {
   final TextEditingController _controllerName = TextEditingController();
   final TextEditingController _controllerDescription = TextEditingController();
-  final CreateTodoBloc _bloc = CreateTodoBloc();
+  final CreateContactBloc _bloc = CreateContactBloc();
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +36,11 @@ class CreateTodo extends StatelessWidget {
               controller: _controllerDescription,
               name: _ongDescription,
               exemple: _exempleDescription,
+              type: TextInputType.number,
             ),
             RaisedButton(
               child: Text(
-                'Cadastrar',
+                _buttonName,
               ),
               onPressed: () => _createOng(context),
             )
@@ -46,9 +50,6 @@ class CreateTodo extends StatelessWidget {
     );
   }
 
-  // @@@@@
-  // Create bloc for this class and call todoServices.Create there.
-  // @@@@@
   void _createOng(BuildContext context) {
     final String _name = _controllerName.text;
     final String _description = _controllerDescription.text;

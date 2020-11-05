@@ -4,9 +4,10 @@ class TextInput extends StatelessWidget {
   final TextEditingController controller;
   final String name;
   final String exemple;
+  final TextInputType type;
 
   // Use {} on constructor to have optional parameter
-  TextInput({this.controller, this.name, this.exemple});
+  TextInput({this.controller, this.name, this.exemple, this.type});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,7 @@ class TextInput extends StatelessWidget {
           labelText: name,
           hintText: exemple,
         ),
+        keyboardType: type,
       ),
     );
   }
