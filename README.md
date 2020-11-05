@@ -6,19 +6,20 @@ This project is a starting point for a Flutter application. The objective is lea
 
 ## Tecnologies
 
-Flutter 1.22.2
-Dart 2.10.2
-Firebase (cloud_firestore: ^0.14.1+3)
+`Flutter 1.22.2`
+`Dart 2.10.2`
+`Firebase (cloud_firestore: ^0.14.1+3)`
 
 ## Illustrations
 
-The application has just two screens. Homepage has the list of contacts that you added on firebase:
+**The application has just two screens. Homepage has the list of contacts that you added on firebase:**
 
 ![](images/contact_list.png)
 
-And if you click to add another contact, will open this Create Contact screen:
+**And if you click to add another contact, will open this Create Contact screen:**
 
 ![](images/add_contact_name.png)
+
 ![](images/add_contact_number.png)
 
 ## Getting Started
