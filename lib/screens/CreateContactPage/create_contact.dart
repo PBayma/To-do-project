@@ -52,9 +52,9 @@ class CreateTodo extends StatelessWidget {
 
   void _createOng(BuildContext context) {
     final String _name = _controllerName.text;
-    final String _description = _controllerDescription.text;
-    if (_name != null && _description != null) {
-      _bloc.createTodo(_name, _description);
+    final String _number = _controllerDescription.text;
+    if (_name != null && _number != null) {
+      _bloc.createTodo(_name, _number);
       Navigator.pop(context);
     }
   }

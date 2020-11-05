@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     margin: EdgeInsets.all(5),
                     child: ListTile(
                       title: Text(item['name']),
-                      subtitle: Text(item['description']),
+                      subtitle: Text(item['number']),
                       trailing: IconButton(
                         icon: Icon(Icons.delete),
                         onPressed: () => _bloc.deleteItem(itemRef),

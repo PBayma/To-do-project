@@ -11,8 +11,8 @@ class CreateContactBloc {
   Sink get input => _streamController.sink;
   Stream<QuerySnapshot> get output => _streamController.stream;
 
-  createTodo(String name, String description) {
-    final createdOng = Contact(name, description);
+  createTodo(String name, String number) {
+    final createdOng = Contact(name, number);
     todoServices.create(createdOng);
   }
 

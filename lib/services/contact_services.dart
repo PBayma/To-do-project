@@ -3,7 +3,7 @@ import 'package:project_bloc/models/contact.dart';
 
 class ContactServices {
   final CollectionReference itemCollection =
-      FirebaseFirestore.instance.collection('ong');
+      FirebaseFirestore.instance.collection('contact');
 
   Stream<QuerySnapshot> get snapshots {
     return itemCollection.snapshots();

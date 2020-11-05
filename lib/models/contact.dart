@@ -2,20 +2,20 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Contact {
   String name;
-  String description;
+  String number;
   DocumentReference reference;
 
-  Contact(this.name, this.description);
+  Contact(this.name, this.number);
 
   Contact.fromJson(Map<String, dynamic> json) {
     name = json['name'];
-    description = json['description'];
+    number = json['number'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['name'] = this.name;
-    data['description'] = this.description;
+    data['number'] = this.number;
     return data;
   }
 
