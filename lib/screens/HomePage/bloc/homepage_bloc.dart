@@ -3,15 +3,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:project_bloc/services/contact_services.dart';
 
 class HomePageBloc {
-  ContactServices todoServices = ContactServices();
+  ContactServices contactServices = ContactServices();
 
   final StreamController _streamController = StreamController();
 
   Sink get input => _streamController.sink;
-  Stream<QuerySnapshot> get output => todoServices.snapshots;
+  Stream<QuerySnapshot> get output => contactServices.snapshots;
 
   deleteItem(String itemRef) {
-    todoServices.delete(itemRef);
+    contactServices.delete(itemRef);
   }
 
   dispose() {
