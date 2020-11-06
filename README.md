@@ -2,7 +2,7 @@
 
 ## General Info
 
-This project is a starting point for a Flutter application. The objective is learn Flutter and try to apply BLoC pattern in a simple application. Beside this, I tried to implement route manager, because this application can be upgraded in the future.
+This project is a starting point for a Flutter application. The objective is learn Flutter and try to apply BLoC pattern in a simple application. Beside this, was implemented a route manager, because this application can be upgraded in the future.
 
 ## Tecnologies
 
